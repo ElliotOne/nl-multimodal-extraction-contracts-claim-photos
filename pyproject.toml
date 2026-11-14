@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "claim-photo-extraction-contracts"
+version = "0.1.0"
+description = "Deterministic admission, budgeting, and contract gates around a Microsoft Foundry vision model for insurance claim photos."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = [
+  "pillow>=11.0,<12",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<9",
+]
+
+[project.scripts]
+claim-photo-gate = "claim_photo_extraction.cli:main"
+claim-photo-web = "claim_photo_extraction.webapp:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/claim_photo_extraction"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

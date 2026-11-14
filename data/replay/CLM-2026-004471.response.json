@@ -1,0 +1,22 @@
+{
+  "_fixture_note": "Hand-authored replay fixture shaped like a Foundry /openai/v1/chat/completions body. It is not a recorded live response. Use --replay to run the contract and routing gates without credentials; use config/foundry.json for a live run.",
+  "id": "chatcmpl-replay-CLM-2026-004471",
+  "object": "chat.completion",
+  "model": "gpt-5-mini",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "refusal": null,
+        "content": "{\"photos\":[{\"photo_id\":\"P1\",\"vehicle_present\":true,\"observed_view\":\"front_left\",\"plate_text\":\"LM64 LVG\",\"plate_legible\":true,\"body_color\":\"blue\",\"damages\":[{\"part\":\"front_fender_left\",\"damage_type\":\"deformation\",\"severity\":\"severe\",\"confidence\":0.95},{\"part\":\"door_front_left\",\"damage_type\":\"deformation\",\"severity\":\"moderate\",\"confidence\":0.9},{\"part\":\"front_bumper\",\"damage_type\":\"deformation\",\"severity\":\"moderate\",\"confidence\":0.85},{\"part\":\"hood\",\"damage_type\":\"dent\",\"severity\":\"minor\",\"confidence\":0.55}],\"airbag_deployed\":false,\"fluid_leak_visible\":false,\"quality_issues\":[\"none\"]},{\"photo_id\":\"P4\",\"vehicle_present\":true,\"observed_view\":\"front\",\"plate_text\":\"LM64 LVG\",\"plate_legible\":true,\"body_color\":\"blue\",\"damages\":[{\"part\":\"front_bumper\",\"damage_type\":\"scratch\",\"severity\":\"minor\",\"confidence\":0.85},{\"part\":\"front_fender_left\",\"damage_type\":\"deformation\",\"severity\":\"severe\",\"confidence\":0.93}],\"airbag_deployed\":null,\"fluid_leak_visible\":false,\"quality_issues\":[\"none\"]},{\"photo_id\":\"P5\",\"vehicle_present\":true,\"observed_view\":\"closeup\",\"plate_text\":null,\"plate_legible\":false,\"body_color\":\"blue\",\"damages\":[{\"part\":\"front_fender_left\",\"damage_type\":\"deformation\",\"severity\":\"severe\",\"confidence\":0.97},{\"part\":\"door_front_left\",\"damage_type\":\"deformation\",\"severity\":\"moderate\",\"confidence\":0.92}],\"airbag_deployed\":null,\"fluid_leak_visible\":false,\"quality_issues\":[\"partial_view\"]}],\"same_vehicle_across_photos\":true,\"overall_severity\":\"moderate\",\"drivable_assessment\":\"likely_drivable\",\"notes\":\"Front-left corner impact: wing crumpled and torn, bumper corner displaced, front edge of the door damaged. Damage is consistent across P1, P4 and P5.\"}"
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4211,
+    "completion_tokens": 362,
+    "total_tokens": 4573
+  }
+}

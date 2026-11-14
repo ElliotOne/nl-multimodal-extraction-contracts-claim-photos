@@ -1,0 +1,50 @@
+{
+  "foundry": {
+    "enabled": true,
+    "base_url": "https://YOUR-RESOURCE.services.ai.azure.com/openai/v1/",
+    "api_key": "replace-me",
+    "model": "gpt-5-mini",
+    "image_detail": "high",
+    "timeout_seconds": 90,
+    "max_output_tokens": 4000,
+    "reasoning_effort": "medium",
+    "samples": 3
+  },
+  "admission": {
+    "allowed_formats": [
+      "JPEG",
+      "PNG",
+      "WEBP"
+    ],
+    "max_file_megabytes": 20,
+    "min_shortest_side_px": 640,
+    "min_sharpness_score": 60.0,
+    "min_mean_luminance": 40.0,
+    "max_mean_luminance": 215.0,
+    "duplicate_hamming_threshold": 6,
+    "max_days_before_incident": 1,
+    "max_days_after_incident": 14,
+    "flag_editing_software": true
+  },
+  "preparation": {
+    "max_longest_side_px": 1536,
+    "jpeg_quality": 85,
+    "token_method": "patch",
+    "patch_multiplier": 1.2,
+    "patch_budget": 6144,
+    "tile_base_tokens": 70,
+    "tile_tokens": 140,
+    "max_image_tokens_per_claim": 9000,
+    "max_images_per_request": 10
+  },
+  "contract": {
+    "min_damage_confidence": 0.6,
+    "min_admitted_photos": 2,
+    "require_plate_match_when_legible": true,
+    "require_color_match": true,
+    "min_sample_agreement": 2,
+    "unreported_zone_min_confidence": 0.8,
+    "unreported_zone_min_severity": "moderate"
+  },
+  "report_directory": "reports"
+}

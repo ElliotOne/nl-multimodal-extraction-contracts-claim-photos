@@ -1,0 +1,55 @@
+{
+  "claim_id": "CLM-2026-004471",
+  "incident_at_utc": "2026-11-09T17:35:00Z",
+  "reported_at_utc": "2026-11-10T08:12:00Z",
+  "vehicle": {
+    "year": 2014,
+    "make": "Suzuki",
+    "model": "Swift",
+    "color": "blue",
+    "plate": "LM64 LVG"
+  },
+  "reported_impact_zones": [
+    "front",
+    "left"
+  ],
+  "claimant_statement": "Car was parked on the street. Came back to find the front nearside corner hit: wing crumpled and torn, bumper corner pushed in, front edge of the door caught. No note left. Car still drives.",
+  "photos": [
+    {
+      "photo_id": "P1",
+      "file": "photos/p1-front-left.jpg",
+      "declared_view": "front_left",
+      "priority": 10
+    },
+    {
+      "photo_id": "P2",
+      "file": "photos/p2-closeup-blurred.jpg",
+      "declared_view": "closeup",
+      "priority": 40
+    },
+    {
+      "photo_id": "P3",
+      "file": "photos/p3-front-left-resend.jpg",
+      "declared_view": "front_left",
+      "priority": 50
+    },
+    {
+      "photo_id": "P4",
+      "file": "photos/p4-front.jpg",
+      "declared_view": "front",
+      "priority": 20
+    },
+    {
+      "photo_id": "P5",
+      "file": "photos/p5-closeup.jpg",
+      "declared_view": "closeup",
+      "priority": 30
+    },
+    {
+      "photo_id": "P6",
+      "file": "photos/p6-thumbnail.jpg",
+      "declared_view": "front",
+      "priority": 60
+    }
+  ]
+}
