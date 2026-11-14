@@ -49,7 +49,7 @@ def estimate_image_tokens(width: int, height: int, config: PreparationConfig) ->
 
 
 def estimate_patch_tokens(width: int, height: int, multiplier: float, patch_budget: int) -> int:
-    """Patch-based accounting used by gpt-5-mini, gpt-5-nano, gpt-4.1-mini and similar models.
+    """Patch-based accounting used by gpt-5.4-mini, gpt-5-mini, gpt-4.1-mini and similar models.
 
     Count 32x32 patches; if the count exceeds the budget, shrink the image so the whole
     number of patches fits, recount, then multiply by the model multiplier and round up.

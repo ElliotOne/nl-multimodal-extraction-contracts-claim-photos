@@ -2,7 +2,7 @@
   "_fixture_note": "Hand-authored replay fixture shaped like a Foundry /openai/v1/chat/completions body. It is not a recorded live response. Use --replay to run the contract and routing gates without credentials; use config/foundry.json for a live run.",
   "id": "chatcmpl-replay-CLM-2026-004471",
   "object": "chat.completion",
-  "model": "gpt-5-mini",
+  "model": "gpt-5.4-mini",
   "choices": [
     {
       "index": 0,

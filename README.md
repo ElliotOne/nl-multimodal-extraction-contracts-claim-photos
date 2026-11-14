@@ -47,7 +47,7 @@ identity checks, confidence thresholds, zone coverage, and routing.
 
 - Python 3.11 or later
 - A Microsoft Foundry resource with a deployed vision-capable model that supports
-  structured outputs, such as `gpt-5.4-mini` (verified), `gpt-5-mini`, `gpt-5`, `gpt-4.1`, or `gpt-4.1-mini`
+  structured outputs, such as `gpt-5.4-mini` (the default, verified live), `gpt-5-mini`, `gpt-5`, `gpt-4.1`, or `gpt-4.1-mini`
 - A Foundry OpenAI-compatible endpoint such as
   `https://<resource>.services.ai.azure.com/openai/v1/`
   or an Azure OpenAI v1 endpoint `https://<resource>.openai.azure.com/openai/v1/`
@@ -122,7 +122,7 @@ The live Foundry config is explicit:
     "enabled": true,
     "base_url": "https://YOUR-RESOURCE.services.ai.azure.com/openai/v1/",
     "api_key": "replace-me",
-    "model": "gpt-5-mini",
+    "model": "gpt-5.4-mini",
     "image_detail": "high",
     "timeout_seconds": 90,
     "max_output_tokens": 4000,
@@ -150,7 +150,7 @@ The live Foundry config is explicit:
     "jpeg_quality": 85,
     "token_method": "patch",
     "patch_multiplier": 1.2,
-    "patch_budget": 6144,
+    "patch_budget": 2500,
     "tile_base_tokens": 70,
     "tile_tokens": 140,
     "max_image_tokens_per_claim": 9000,
@@ -189,12 +189,14 @@ Azure OpenAI endpoint and resolves it to the OpenAI-compatible base URL before c
 `chat/completions`.
 
 Token estimation follows the model family. `patch` with a multiplier of `1.2`
-matches `gpt-5-mini`; `gpt-4.1-mini` uses `1.62`. `tile` with base `70` and `140`
-per tile matches `gpt-5` and `gpt-5.1`; `gpt-4.1` and `gpt-4o` use `85` and `170`.
-The estimate is a budgeting tool. The report also records the usage block the
-endpoint returns so the two can be compared. A live `gpt-5.4-mini` run billed
-3,384 prompt tokens for three photos the formula estimated at 6,222 image
-tokens, so treat the estimate as an upper bound and calibrate from usage.
+and a budget of `2500` patches matches `gpt-5.4-mini` at high detail; `gpt-5-mini`
+uses the same multiplier and `gpt-4.1-mini` uses `1.62` with a `6144` budget.
+`tile` with base `70` and `140` per tile matches `gpt-5` and `gpt-5.1`; `gpt-4.1`
+and `gpt-4o` use `85` and `170`. The estimate is a budgeting tool. The report also
+records the usage block the endpoint returns so the two can be compared. Live
+`gpt-5.4-mini` runs on the sample claim billed about 3,372 prompt tokens per call,
+text included, against an estimate of 5,192 image tokens, so treat the estimate as
+an upper bound and calibrate from usage.
 
 ## How It Works
 
